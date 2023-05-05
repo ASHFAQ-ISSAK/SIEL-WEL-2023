@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 function AddGame({ onAddGame }) {
   const [gameNo, setGameNo] = useState("");
@@ -11,7 +11,7 @@ function AddGame({ onAddGame }) {
   const [court, setCourt] = useState("");
   const [location, setLocation] = useState("");
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
     const newGame = {
       gameNo,
@@ -24,16 +24,34 @@ function AddGame({ onAddGame }) {
       court,
       location,
     };
-    onAddGame(newGame);
-    setGameNo("");
-    setHome("");
-    setAway("");
-    setConference("");
-    setDay("");
-    setDate("");
-    setTime("");
-    setCourt("");
-    setLocation("");
+
+    try {
+      const response = await fetch("http://localhost:4000/games", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newGame),
+      });
+      if (response.ok) {
+        const data = await response.json();
+        onAddGame(data);
+        setGameNo("");
+        setHome("");
+        setAway("");
+        setConference("");
+        setDay("");
+        setDate("");
+        setTime("");
+        setCourt("");
+        setLocation("");
+      } else {
+        // throw new Error("Unable to add game");
+      }
+    } catch (error) {
+      console.error(error);
+      console.log(error.response);
+    }
   }
 
   return (

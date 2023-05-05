@@ -9,7 +9,7 @@ function GameCard({ game }) {
       <h2>
         {home} vs {away}
       </h2>
-      <h3>HELLO TJHIS IS THE GAME CARD </h3>
+      {/* <h3>HELLO TJHIS IS THE GAME CARD </h3> */}
       <p>
         <span>Game No: </span>
         {gameNo}
