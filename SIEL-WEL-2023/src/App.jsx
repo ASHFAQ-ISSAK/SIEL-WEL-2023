@@ -50,6 +50,18 @@ function App() {
     });
     setFilteredGames(filtered);
   }
+  function handleAddGame(newGame) {
+    axios
+      .post("http://localhost:4000/games", newGame)
+      .then((response) => {
+        // Update the state with the new game added
+        setGames([...games, response.data]);
+        setFilteredGames([...filteredGames, response.data]);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
 
   return (
     <div className="App">
@@ -70,9 +82,8 @@ function App() {
             />
           }
         />
+        <Route path="addgame" element={<AddGame onAddGame={handleAddGame} />} />
       </Routes>
-
-      <AddGame setGames={setGames} />
     </div>
   );
 }
