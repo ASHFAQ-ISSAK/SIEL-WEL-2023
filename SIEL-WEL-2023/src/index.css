@@ -1,3 +1,4 @@
+
 .App{
   display: flex;
   flex-direction: column;
@@ -10,11 +11,16 @@
   width: 100%;
   flex-wrap: wrap;
 }
+.schedule-title{
+  color:red;
+  width: 100%;
+  text-align: center;
+}
 .GameCard{
   width: 800px;
+  border:solid red 1px ;
 }
 .AddGame{
- /* background-color: aquamarine; */
  width: 800px;
  display: flex;
  flex-direction: column;
@@ -53,7 +59,6 @@ input[type="tel"] {
   justify-content: space-between;
   width: 800px;
   text-align: center;
-}
-.Schedule{
-  width: 700px;
-}
+} */
+
+/* App container

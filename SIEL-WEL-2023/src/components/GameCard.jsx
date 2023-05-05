@@ -1,15 +1,19 @@
 import React from "react";
+import DeleteGame from "./Deletegame";
 
-function GameCard({ game }) {
+function GameCard({ game, handleGameClick, handleGameDelete }) {
   const { gameNo, home, away, conference, day, date, time, court, location } =
     game;
+
+  function handleDelete() {
+    handleGameDelete(gameNo);
+  }
 
   return (
     <div className="GameCard">
       <h2>
         {home} vs {away}
       </h2>
-      {/* <h3>HELLO TJHIS IS THE GAME CARD </h3> */}
       <p>
         <span>Game No: </span>
         {gameNo}
@@ -38,6 +42,7 @@ function GameCard({ game }) {
         <span>Location: </span>
         {location}
       </p>
+      <DeleteGame gameNo={gameNo} onDelete={handleDelete} />
     </div>
   );
 }

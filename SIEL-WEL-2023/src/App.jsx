@@ -65,25 +65,43 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Basketball Schedule</h1>
-      <Nav />
-      <Routes>
-        <Route
-          path="filter"
-          element={<Filter games={games} setFilteredGames={setFilteredGames} />}
+      <div className="mainnav">
+        <img
+          src="https://cdn-bbelj.nitrocdn.com/omkVCqbvMznjwKmKsueKsprTbgkibGyG/assets/static/optimized/rev-688f196/wp-content/uploads/2020/05/FEBA-LOGO-2020-e1588767307784.png"
+          alt="SIEL LEAGUE"
         />
-        <Route
-          path="gamelist"
-          element={
-            <Schedule
-              games={filteredGames}
-              setSelectedGame={setSelectedGame}
-              setFilteredGames={setFilteredGames}
+        <div className="route-links">
+          <Nav />
+          <Routes>
+            <Route
+              path="filter"
+              element={
+                <Filter games={games} setFilteredGames={setFilteredGames} />
+              }
             />
-          }
-        />
-        <Route path="addgame" element={<AddGame onAddGame={handleAddGame} />} />
-      </Routes>
+
+            <Route
+              path="gamelist"
+              element={
+                <Schedule
+                  games={filteredGames}
+                  setSelectedGame={setSelectedGame}
+                  setFilteredGames={setFilteredGames}
+                />
+              }
+            />
+            <Route
+              path="addgame"
+              element={<AddGame onAddGame={handleAddGame} />}
+            />
+          </Routes>
+        </div>
+      </div>
+      <h2>
+        The league has 16 team grouped in two conferences NORTH and SOUTH. With
+        playoffs to determine conference champions who play for the SIEL
+        championship Crown.{" "}
+      </h2>
     </div>
   );
 }

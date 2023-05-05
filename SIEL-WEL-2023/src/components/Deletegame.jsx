@@ -1,12 +1,12 @@
 import React from "react";
 
-function DeleteGame({ gameNo, onDelete }) {
+function DeleteGame({ home, onDelete }) {
   function handleDelete() {
-    fetch(`http://localhost:4000/games/${gameNo}`, {
+    fetch(`http://localhost:4000/games/${home}`, {
       method: "DELETE",
     })
       .then(() => {
-        onDelete(gameNo);
+        onDelete(home);
       })
       .catch((error) => console.error(error));
   }
