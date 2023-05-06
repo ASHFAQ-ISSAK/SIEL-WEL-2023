@@ -13,7 +13,6 @@ function Schedule({ games, setSelectedGame, setFilteredGames }) {
 
   return (
     <div className="Schedule">
-      <h2 className="schedule-title">Schedule</h2>
       {games.map((game) => (
         <GameCard
           key={game.gameNo}

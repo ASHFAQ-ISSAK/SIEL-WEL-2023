@@ -2,10 +2,16 @@ import { Link } from "react-router-dom";
 
 function Nav() {
   return (
-    <div className="navbar">
-      <Link to="/filter">Search</Link>
-      <Link to="/gamelist">Games</Link>
-      <Link to="/addgame">Add game</Link>
+    <div id="navigation">
+      <Link to="/filter" id="Search-a">
+        Search
+      </Link>
+      <Link to="/gamelist" id="Games-a">
+        Games
+      </Link>
+      <Link to="/addgame" id="Addgame-a">
+        Add game
+      </Link>
     </div>
   );
 }

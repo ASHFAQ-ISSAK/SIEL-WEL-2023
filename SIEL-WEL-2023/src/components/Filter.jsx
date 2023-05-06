@@ -14,12 +14,12 @@ const Filter = ({ games }) => {
 
   return (
     <div className="filteredSearch">
-      <label>Search</label>
+      <label></label>
       <input
         type="text"
         value={searchTerm}
         onChange={handleSearch}
-        placeholder="Search for A game"
+        placeholder="Search for a game"
       />
       <div className="filteredResults">
         {filteredGames.map((game) => (
