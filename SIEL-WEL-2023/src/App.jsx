@@ -64,37 +64,41 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div id="App">
       <div className="mainnav">
-        <img
-          src="https://cdn-bbelj.nitrocdn.com/omkVCqbvMznjwKmKsueKsprTbgkibGyG/assets/static/optimized/rev-688f196/wp-content/uploads/2020/05/FEBA-LOGO-2020-e1588767307784.png"
-          alt="SIEL LEAGUE"
-        />
-        <div className="route-links">
-          <Nav />
-          <Routes>
-            <Route
-              path="filter"
-              element={
-                <Filter games={games} setFilteredGames={setFilteredGames} />
-              }
-            />
+        <div id="topbar">
+          <img
+            src="https://i.pinimg.com/originals/5c/fa/b3/5cfab3500a42e674811206d570c07b95.jpg"
+            alt=""
+          />
+          <h2 className="title">Street Insider Exposure League</h2>
 
-            <Route
-              path="gamelist"
-              element={
-                <Schedule
-                  games={filteredGames}
-                  setSelectedGame={setSelectedGame}
-                  setFilteredGames={setFilteredGames}
-                />
-              }
-            />
-            <Route
-              path="addgame"
-              element={<AddGame onAddGame={handleAddGame} />}
-            />
-          </Routes>
+          <div className="route-links">
+            <Nav />
+            <Routes>
+              <Route
+                path="filter"
+                element={
+                  <Filter games={games} setFilteredGames={setFilteredGames} />
+                }
+              />
+
+              <Route
+                path="gamelist"
+                element={
+                  <Schedule
+                    games={filteredGames}
+                    setSelectedGame={setSelectedGame}
+                    setFilteredGames={setFilteredGames}
+                  />
+                }
+              />
+              <Route
+                path="addgame"
+                element={<AddGame onAddGame={handleAddGame} />}
+              />
+            </Routes>
+          </div>
         </div>
       </div>
       <h2>
