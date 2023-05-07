@@ -6,6 +6,7 @@ import Filter from "./components/Filter";
 import AddGame from "./components/Addgame";
 import GameCard from "./components/GameCard";
 import axios from "axios";
+import Home from "./components/Home";
 
 function App() {
   const [games, setGames] = useState([]);
@@ -67,16 +68,17 @@ function App() {
     <div id="App">
       <div className="mainnav">
         <div id="topbar">
-          <img src="/src/assets/152961aa-5e95-413b-b4bb-818dac96e7d4.svg" />
+          {/* <img src="/public/assets/152961aa-5e95-413b-b4bb-818dac96e7d4.svg" />
           <h2 className="title">Street Insider Exposure League</h2>
           <h2>
             The league has 16 team grouped in two conferences NORTH and SOUTH.
             With playoffs to determine conference champions who play for the
             <span className="emphasis"> SIEL </span>championship Crown.{" "}
-          </h2>
+          </h2> */}
           <div className="route-links">
             <Nav />
             <Routes>
+              <Route path="/" element={<Home />} />
               <Route
                 path="filter"
                 element={
