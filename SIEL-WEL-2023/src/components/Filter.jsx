@@ -25,7 +25,7 @@ const Filter = ({ games }) => {
         {filteredGames.map((game) => (
           <div>
             <h4>
-              {game.home} vs {game.away}
+              <span>{game.home}</span> vs <span>{game.away}</span>
             </h4>
           </div>
         ))}

@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 function AddGame({ onAddGame }) {
   const [gameNo, setGameNo] = useState("");
   const [home, setHome] = useState("");
@@ -67,7 +66,7 @@ function AddGame({ onAddGame }) {
           />
         </label>
         <label>
-          Home Team:
+          Home Team :
           <input
             type="text"
             value={home}
