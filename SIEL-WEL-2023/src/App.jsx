@@ -14,7 +14,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:4000/games")
+      .get("https://basketball-api.onrender.com/games")
       .then((response) => {
         setGames(response.data);
         setFilteredGames(response.data);
@@ -52,7 +52,7 @@ function App() {
   }
   function handleAddGame(newGame) {
     axios
-      .post("http://localhost:4000/games", newGame)
+      .post("https://basketball-api.onrender.com/games", newGame)
       .then((response) => {
         // Update the state with the new game added
         setGames([...games, response.data]);
