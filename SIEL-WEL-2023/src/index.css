@@ -20,6 +20,7 @@
 a{
   text-decoration: none;
   color: black;
+  font-weight: bolder;
 }
 a:hover{
   text-decoration: underline;
@@ -98,6 +99,7 @@ box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
 width: 98%;
 padding: 30px 10px;
 margin-bottom: 20px;
+
 }
 #Search-a{
   padding-right: 20px;
@@ -115,18 +117,15 @@ margin-bottom: 20px;
   box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
 }
 div h4{
-  border: solid 1px rgb(226, 171, 171);
+  border: solid 1px rgb(0, 0, 0);
   display: flex;
   justify-content: space-between;
   padding: 19px 9px;
-  border-radius: 30px;
-  border-top-right-radius: 5px;
-  border-bottom-left-radius: 5px;
+  border-radius: 12px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   color: rgb(83, 32, 32);
   font-weight: 900;
-  
-  
+  margin-bottom: 30px;  
 }
 #App {
   background-image: url(/src/assets/artur-kornakov-dpz9cwkgkt8-unsplash.jpg);
@@ -144,13 +143,32 @@ button{
   font-size: x-large;
   margin-top: 20px;
 }
-#topbar img svg{
-  width: 250px;
-}
+
 span{
   color: rgb(53, 49, 49);
   font-weight: bolder;
 }
 .emphasis{
   color: red;
+}
+a{
+  margin-right: 30px;
+}
+#topbar .center{
+  text-align: center;
+  width: 900px;
+}
+#content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#content img{
+  width: 120px;
+}
+.title{
+  font-size: 65px;
+  margin-bottom: 65px;
 }
