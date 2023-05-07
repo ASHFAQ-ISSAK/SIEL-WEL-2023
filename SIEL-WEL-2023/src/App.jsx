@@ -67,12 +67,13 @@ function App() {
     <div id="App">
       <div className="mainnav">
         <div id="topbar">
-          <img
-            src="https://i.pinimg.com/originals/5c/fa/b3/5cfab3500a42e674811206d570c07b95.jpg"
-            alt=""
-          />
+          <img src="/src/assets/152961aa-5e95-413b-b4bb-818dac96e7d4.svg" />
           <h2 className="title">Street Insider Exposure League</h2>
-
+          <h2>
+            The league has 16 team grouped in two conferences NORTH and SOUTH.
+            With playoffs to determine conference champions who play for the
+            <span className="emphasis"> SIEL </span>championship Crown.{" "}
+          </h2>
           <div className="route-links">
             <Nav />
             <Routes>
@@ -101,11 +102,6 @@ function App() {
           </div>
         </div>
       </div>
-      <h2>
-        The league has 16 team grouped in two conferences NORTH and SOUTH. With
-        playoffs to determine conference champions who play for the SIEL
-        championship Crown.{" "}
-      </h2>
     </div>
   );
 }
