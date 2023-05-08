@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
+
 function AddGame({ onAddGame }) {
   const [gameNo, setGameNo] = useState("");
   const [home, setHome] = useState("");
@@ -13,6 +15,7 @@ function AddGame({ onAddGame }) {
   async function handleSubmit(event) {
     event.preventDefault();
     const newGame = {
+      id: uuidv4(), // add a unique ID to the new game object
       gameNo,
       home,
       away,
@@ -25,16 +28,13 @@ function AddGame({ onAddGame }) {
     };
 
     try {
-      const response = await fetch(
-        "https://basketball-api.onrender.com/games",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(newGame),
-        }
-      );
+      const response = await fetch("http://localhost:4000/games", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newGame),
+      });
       if (response.ok) {
         const data = await response.json();
         onAddGame(data);

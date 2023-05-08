@@ -23,10 +23,22 @@ const Filter = ({ games }) => {
       />
       <div className="filteredResults">
         {filteredGames.map((game) => (
-          <div>
+          <div id="card">
             <h4>
-              <span>{game.home}</span> vs <span>{game.away}</span>
+              <span>{game.gameNo}</span>
+              <span>{game.date}</span>
             </h4>
+            <h3>
+              <span className="homeTeam">{game.home}</span> vs{" "}
+              <span className="awayTeam">{game.away}</span>
+            </h3>
+            <p>
+              Location:<span> . . </span> {game.location}
+            </p>
+            <p>
+              Date:<span> . . . </span> {game.date}
+            </p>
+            <p>Venue: {game.court}</p>
           </div>
         ))}
       </div>
