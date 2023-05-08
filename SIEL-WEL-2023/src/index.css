@@ -1,13 +1,22 @@
 *{
   margin: 0;
   padding: 0;
-}
+  font-family: BebasNeue-regular;
 
+}
+@font-face {
+  font-family: BebasNeue-regular;
+  src: url(/SIEL-WEL-2023/public/assets/fonts/BebasNeue-Regular.ttf);
+}
 .Schedule{
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
   justify-content: center;
-  flex-direction: column;
-  width: 100%;
+  align-items: center;
+  text-align: start;
+  background: linear-gradient(170deg, rgba(175,219,228,1) 0%, rgba(236,215,220,1) 100%);
+  padding: 1rem;
   /* flex-wrap: wrap; */
   background: rgb(175,219,228);
   background: linear-gradient(170deg, rgba(175,219,228,1) 0%, rgba(236,215,220,1) 100%);
@@ -19,7 +28,8 @@
 }
 a{
   text-decoration: none;
-  color: black;
+  text-transform: uppercase;
+  color:white;
   font-weight: bolder;
 }
 a:hover{
@@ -27,17 +37,33 @@ a:hover{
   transition: 1s;
 }
 .GameCard{
-  width: 1000px;
+  width: 400px;
   /* border:solid gainsboro 1px ; */
   border-radius: 5px;
   margin-bottom: 10px;
   padding: 5px 8px;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;}
-.AddGame{
- width: 800px;
- display: flex;
- flex-direction: column;
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
 }
+.GameCard h2{
+  font-size: 21px;
+  margin-bottom: 5px;
+  text-decoration: underline;
+}
+
+.AddGame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+}
+form{
+  margin-top: 15px;
+  text-align: start;
+}
+
 .form-row {
   display: flex;
   flex-wrap: wrap;
@@ -46,37 +72,76 @@ a:hover{
 }
 
 .form-column {
-  width: 48%;
+  width: 98%;
 }
 
 label {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="tel"] {
-  width: 55%;
-  padding: 0.5rem;
+  width: 99%;
+  padding:11px 6px;
   border-radius: 0.25rem;
   border: 1px solid #ccc;
   margin-bottom: 1rem;
+  margin-left: 9px;
+  font-size: 20px;
 }
 
-.filteredResults{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 800px;
+
+.filteredResults {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  justify-content: center;
+  align-items: center;
   text-align: start;
-  
-} 
+  background: linear-gradient(170deg, rgba(175,219,228,1) 0%, rgba(236,215,220,1) 100%);
+  padding: 1rem;
+}
+
+.filteredResults h3{
+  border-radius: 5px;
+  margin: 18px 0;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;}
+#card {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.filteredResults div h4 {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+}
+#card h3{
+  display: flex;
+  justify-content: space-between;
+  /* border: solid 1px ; */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 20px 15px;
+}
+
+
 .filteredSearch input{
   width: 98%;
-  padding: 20px 10px;
   border-radius: 20px;
   font-size: 20px;
+  margin-top: 10px;
+}
+label{
+  
+  font-weight: bolder;
 }
  .mainnav{
 width: 100%;
@@ -84,7 +149,7 @@ display: flex;
 flex-direction: column;
 
 }
-.mainnav img{
+.image-container img{
 width: 30px;
 margin-right: 12px;
 }
@@ -94,13 +159,7 @@ margin-right: 12px;
 .route-links{
   width: 100%;
 }
-#navigation{
-box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
-width: 98%;
-padding: 30px 10px;
-margin-bottom: 20px;
 
-}
 #Search-a{
   padding-right: 20px;
 }
@@ -113,34 +172,29 @@ margin-bottom: 20px;
 #topbar{
   width: 100%;
   height: 100vh;
-  padding: 0 15px;
   box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
 }
-div h4{
-  border: solid 1px rgb(0, 0, 0);
-  display: flex;
-  justify-content: space-between;
-  padding: 19px 9px;
-  border-radius: 12px;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  color: rgb(83, 32, 32);
-  font-weight: 900;
-  margin-bottom: 30px;  
+#navigation{
+  padding: 20px 10px;
+  background-color: black;
+  font-size: 13px;  
 }
+
 #App {
   background-image: url(/src/assets/artur-kornakov-dpz9cwkgkt8-unsplash.jpg);
   background-position: center;
   background-size: cover;
-  background-repeat: repeat-y;
+  /* background-repeat: repeat-y; */
 }
 button{
-  background-image: url(https://t3.ftcdn.net/jpg/02/70/11/30/240_F_270113008_XyspxhFcUjfycAl1pSBbisbB0Ry1LKNj.jpg);  
+  /* background-image: url(https://t3.ftcdn.net/jpg/02/70/11/30/240_F_270113008_XyspxhFcUjfycAl1pSBbisbB0Ry1LKNj.jpg);   */
+  background-color: black;
   padding: 3px 15px;
   border: none;
   border-radius: 10px;
   color: white;
   font-weight: 700;
-  font-size: x-large;
+  font-size: 15px;
   margin-top: 20px;
 }
 
@@ -171,4 +225,29 @@ a{
 .title{
   font-size: 65px;
   margin-bottom: 65px;
+}
+.image-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: float 3s infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    transform: translate(-50%, -70%);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+h3 span.homeTeam{
+color: rgb(21, 173, 21);
+}
+h3 span.awayTeam{
+  color: rgb(173, 21, 21);
 }
