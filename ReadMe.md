@@ -20,5 +20,3 @@ React
 Axios
 React Router
 API Endpoint
-GET: http://localhost:4000/games
-POST: http://localhost:4000/games
