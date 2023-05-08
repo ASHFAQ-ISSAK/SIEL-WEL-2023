@@ -2,7 +2,7 @@ import React from "react";
 
 function DeleteGame({ home, onDelete }) {
   function handleDelete() {
-    fetch(`http://localhost:4000/games`, {
+    fetch(`https://basketball-api.onrender.com/games`, {
       method: "DELETE",
     })
       .then(() => {
@@ -13,7 +13,7 @@ function DeleteGame({ home, onDelete }) {
 
   return (
     <div className="DeleteGame">
-      <button onClick={handleDelete}>Delete Game</button>
+      <button onClick={handleDelete}>Remove game</button>
     </div>
   );
 }

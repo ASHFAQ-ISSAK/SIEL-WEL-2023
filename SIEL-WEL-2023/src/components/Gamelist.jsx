@@ -22,7 +22,7 @@ function GameList() {
   }
 
   function handleAddGame(newGame) {
-    fetch("http://localhost:4000/games", {
+    fetch("https://basketball-api.onrender.com/games", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
