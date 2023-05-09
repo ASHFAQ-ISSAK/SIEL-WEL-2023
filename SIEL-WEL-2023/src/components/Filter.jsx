@@ -29,8 +29,15 @@ const Filter = ({ games }) => {
               <span>{game.date}</span>
             </h4>
             <h3>
-              <span className="homeTeam">{game.home}</span> vs{" "}
-              <span className="awayTeam">{game.away}</span>
+              <span className="homeTeam">
+                {game.home}
+                <sup>home</sup>
+              </span>{" "}
+              vs{" "}
+              <span className="awayTeam">
+                {game.away}
+                <sup>away</sup>
+              </span>
             </h3>
             <p>
               Location:<span> . . </span> {game.location}
