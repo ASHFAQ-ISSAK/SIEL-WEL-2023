@@ -245,9 +245,25 @@ a{
     transform: translate(-50%, -50%);
   }
 }
-h3 span.homeTeam{
+h3 span.homeTeam sup{
 color: rgb(21, 173, 21);
+vertical-align: super;
+  font-size: smaller;
+   margin-left: 9px;
+  border-left: solid 1px rgb(167, 236, 165);
+  border-right: solid 1px rgb(167, 236, 165);
+
+  padding: 3px;
+  border-radius: 5px;
 }
-h3 span.awayTeam{
-  color: rgb(173, 21, 21);
+h3 span.awayTeam sup{
+  color: rgb(247, 62, 62);
+  vertical-align: super;
+  font-size: smaller;
+  margin-left: 9px;
+  border-left: solid 1px rgb(224, 107, 107);
+  border-right: solid 1px rgb(224, 107, 107);
+
+  padding: 3px;
+  border-radius: 5px;
 }
